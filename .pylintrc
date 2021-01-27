@@ -1,0 +1,5 @@
+[FORMAT]
+indent-string='  '
+
+[MASTER]
+load-plugins=pylint_django

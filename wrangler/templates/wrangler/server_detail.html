@@ -1,0 +1,37 @@
+{% extends 'wrangler/base.html' %}
+
+{% block title %}{{ server.name }} Detail - Phukish Minecraft{% endblock %}
+
+
+{% block myserver_active %}
+{% if user == server.owner %} active{% endif %}
+{% endblock %}
+
+{% block allserver_active %}
+{% if user != server.owner %} active{% endif %}
+{% endblock %}
+
+{% block content %}
+<b>Name:</b> {{ server.name }}<br />
+<b>Host:</b> {{ server.get_socket }}<br />
+<b>Type:</b> {{ server.server_type }}<br />
+{% if status.version.name %}
+<b>Players:</b> {{ status.players.online }} / {{ status.players.max }}<br />
+{% endif %}
+{% if status.players.online %}
+  <p>
+  &nbsp;<br />
+  {% for player in status.players.sample %}
+    <img src="https://minotar.net/avatar/{{ player.id }}/60" />
+    {{ player.name }}<br />
+  {% endfor %}
+  </p>
+{% endif %}
+{% if logs %}
+  <b>Logs:</b>
+  <pre><code>
+  {% for log in logs %}{{ log }}
+  {% endfor %}
+{% endif %}
+</code></pre>
+{% endblock %}

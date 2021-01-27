@@ -1,0 +1,29 @@
+{% extends 'wrangler/base.html' %}
+
+{% block content %}
+<h2>Guide to creating a server</h2>
+<ul>
+<li>Go to <b>Profile</b> > <b>Add Minecraft User</b></li>
+<li>Add your minecraft username, and any user you want to OP or add to an allow-list</li>
+<li>Use the <b>Create Server</b> tab</li>
+<ul>
+  <li><b>Name</b>: A unique server name, can contain letters, numbers and hypens.</li>
+  <li><b>Host</b>: The linux computer where your server will live.</li>
+  <li>
+    <b>Game Type</b>:
+    Creative is a free play environment, Survivial is competitive PvE game.
+  </li>
+  <li><b>Server Type</b>: Vanilla, FeedTheBeast, Forge, pick your mine flavor.</li>
+    <ul><li><small><b>Note:</b>The version number on modded types is the modpack version.</small></li></ul>
+  <li>
+    <b>Op List</b>:
+    Select multiple names (added in your profile) to have op power on the server
+  </li>
+</ul>
+<li>Click <b>Create Server</b></li>
+<li>You will be taken to the server detail page.</li>
+<li>Refresh this page until you see the "server started" text at the bottom of the log.</li>
+<li>Vanilla servers take about 60 seconds to boot, Modded servers are 5 to 10 minutes.</li>
+</li>
+</ul>
+{% endblock %}

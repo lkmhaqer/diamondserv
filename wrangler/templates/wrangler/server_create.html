@@ -1,0 +1,26 @@
+{% extends 'wrangler/base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}Create Server - Phukish Minecraft{% endblock %}
+
+{% block content %}
+<h2>Create Server</h2>
+<p>
+  Check out the getting started 
+  <a href="{% url 'wrangler:page' 'guide' %}">guide</a>.
+</p>
+{% if error_message %}<hr><b>{{ error_message }}</b><hr>{% endif %}
+<div class="row">
+  <div class="col-lg-4">
+    <form action="{% url 'wrangler:server_create' %}" method="POST">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      {% buttons %}
+        <button type="submit" class="btn btn-primary">
+        Create Server
+        </button>
+      {% endbuttons %}
+    </form>
+  </div>
+</div>
+{% endblock %}

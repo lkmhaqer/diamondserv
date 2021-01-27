@@ -1,0 +1,10 @@
+{% extends 'wrangler/base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Welcome {{ user.username|default:'Guest' }}</h2>
+Today on offer, we have free minecraft servers!<br />
+<img src="{% static 'wrangler/spin-diamond-tiny.gif' %}" />
+<img src="{% static 'wrangler/spin-diamond-tiny.gif' %}" />
+<img src="{% static 'wrangler/spin-diamond-tiny.gif' %}" />
+{% endblock %}

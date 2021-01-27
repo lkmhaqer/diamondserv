@@ -1,0 +1,23 @@
+{% extends 'wrangler/base.html' %}
+
+{% block title %}User Profile - Phukish Minecraft{% endblock %}
+
+{% block profile_active %} active{% endblock %}
+
+{% block content %}
+<p>
+<h3>{{ user }}'s Profile</h3>
+</p>
+<p>
+<a href="{% url 'password_change' %}" class="btn btn-primary">Change Password</a>
+<a href="{% url 'accounts:add_minecraft_user' %}" class="btn btn-primary">Add Minecraft User</a>
+</p>
+
+<p>Minecraft Usernames:
+<ul>
+{% for minecraft_user in user.minecraftuser_set.all %}
+  <li>{{ minecraft_user }}</li>
+{% endfor %}
+</ul>
+</p>
+{% endblock %}

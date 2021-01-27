@@ -1,0 +1,98 @@
+{% extends 'wrangler/base.html' %}
+
+{% block title %}User Status - Phukish Minecraft{% endblock %}
+
+{% block myserver_active %} active{% endblock %}
+
+{% block content %}
+
+{% if servers %}
+<table border=1 cellpadding=5>
+  <tr>
+    <th>Name</th>
+    <th>Host</th>
+    <th>Type</th>
+    <th>Minecraft Version</th>
+    <th>Players</th>
+    <th>Restart</th>
+    <th>Delete</th>
+  </tr>
+  {% for server, status in servers %}
+    {% if status.version.name %}
+      <tr class="table-success">
+        <td>
+          <b><a href="{% url 'wrangler:server_detail' server_name=server.name %}">{{ server.name }}</a></b>
+        </td>
+        <td>
+          {{ server.get_socket }}
+        </td>
+        <td>
+          {{ server.server_type }}
+        </td>
+        <td>
+          {{ status.version.name }}
+        </td>
+        <td>
+          {{ status.players.online }} / {{ status.players.max }}
+        </td>
+        <td>
+          <form action="{% url 'wrangler:server_restart' server_name=server.name %}" method="POST" onsubmit="window.confirm_form()">
+            {% csrf_token %}
+            <input type="submit" value="Restart" />
+          </form>
+        </td>
+        <td>
+          <form action="{% url 'wrangler:server_delete' server_name=server.name %}" method="POST" onsubmit="window.confirm_form()">
+            {% csrf_token %}
+            <input type="submit" value="Delete" />
+          </form>
+        </td>
+      </tr>
+    {% else %}
+      <tr class="table-warning">
+        <td>
+          <b><a href="{% url 'wrangler:server_detail' server_name=server.name %}">{{ server.name }}</a></b>
+        </td>
+        <td>
+          {{ server.get_socket }}
+        </td>
+        <td>
+          {{ status.version.error }}
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          (╯°□°)╯︵ ┻━┻
+        </td>
+        <td>
+          <form action="{% url 'wrangler:server_restart' server_name=server.name %}" method="POST" onsubmit="window.confirm_form()">
+            {% csrf_token %}
+            <input type="submit" value="Restart" disabled />
+          </form>
+        </td>
+        <td>
+          <form action="{% url 'wrangler:server_delete' server_name=server.name %}" method="POST" onsubmit="window.confirm_form()">
+            {% csrf_token %}
+            <input type="submit" value="Delete" />
+          </form>
+        </td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+&nbsp;<br />
+Total players on your servers: &nbsp;&nbsp;{{ total_players }} / {{ total_capacity }}
+<script type="text/javascript">
+  window.confirm_form = function() {
+    var isValid = confirm('Are you sure you?');
+    if (!isValid) {
+      event.preventDefault();
+    }
+  }
+</script>
+{% else %}
+No servers found ¯\_(ツ)_/¯
+{% endif %}
+
+{% endblock %}

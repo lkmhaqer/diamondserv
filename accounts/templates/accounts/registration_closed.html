@@ -1,0 +1,14 @@
+{% extends 'wrangler/base.html' %}
+
+{% block title %}Registration - Phukish Minecraft{% endblock %}
+
+{% block register_active %} active{% endblock %}
+
+{% block content %}
+<h2>Registration is Invite Only</h2>
+<p>Unfortunately we are not accepting new registrations without invite codes at this time.</p>
+<p>
+  Do you have an invite code to use?
+  <a href="{% url 'accounts:invite_registration' '00000000-0000-0000-0000-000000000000' %}">Click Here</a>.
+</p>
+{% endblock %}

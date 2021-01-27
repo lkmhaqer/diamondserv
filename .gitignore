@@ -1,0 +1,7 @@
+**/.vscode
+**/__pycache__
+*.py[cod]
+db.sqlite3
+production.env
+development.env
+staging.env

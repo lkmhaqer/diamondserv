@@ -1,0 +1,43 @@
+kind: pipeline
+name: diamondserv
+
+steps:
+- name: lint-and-test
+  image: python:3.8-alpine
+  commands:
+  - apk update
+  - apk add gcc python3-dev musl-dev mariadb-dev
+  - pip install -r requirements.txt
+  - pylint accounts diamondserv wrangler
+  - python manage.py test
+
+- name: build
+  image: docker:dind
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
+  commands:
+  - docker build -t local/diamondserv:beta -f ./docker/Dockerfile .
+  - docker tag local/diamondserv:beta localhost:5000/diamondserv:beta
+  - docker push localhost:5000/diamondserv:beta
+
+- name: discord
+  image: appleboy/drone-discord
+  settings:
+    webhook_id:
+      from_secret: discord_webhook_id
+    webhook_token:
+      from_secret: discord_webhook_token
+    message: >
+      {{#success build.status}}
+        Build {{build.number}} succeeded and docker image published. Great job!
+      {{else}}
+        Build {{build.number}} failed. Ya blew it!
+      {{/success}}
+  when:
+    status: [ success, failure ]
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run/docker.sock

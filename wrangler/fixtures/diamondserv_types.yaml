@@ -1,0 +1,475 @@
+- model: wrangler.environmentvar
+  pk: 1
+  fields:
+    name: TYPE
+    value: FTBA
+- model: wrangler.environmentvar
+  pk: 2
+  fields:
+    name: LEVEL_TYPE
+    value: flat
+- model: wrangler.environmentvar
+  pk: 5
+  fields:
+    name: MEMORY
+    value: 4G
+- model: wrangler.environmentvar
+  pk: 6
+  fields:
+    name: HARDCORE
+    value: 'true'
+- model: wrangler.environmentvar
+  pk: 8
+  fields:
+    name: DIFFICULTY
+    value: hard
+- model: wrangler.environmentvar
+  pk: 267
+  fields:
+    name: SPAWN_MONSTERS
+    value: 'false'
+- model: wrangler.environmentvar
+  pk: 268
+  fields:
+    name: FTB_MODPACK_ID
+    value: '35'
+- model: wrangler.environmentvar
+  pk: 269
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '174'
+- model: wrangler.environmentvar
+  pk: 270
+  fields:
+    name: FTB_MODPACK_ID
+    value: '23'
+- model: wrangler.environmentvar
+  pk: 271
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '99'
+- model: wrangler.environmentvar
+  pk: 272
+  fields:
+    name: FTB_MODPACK_ID
+    value: '25'
+- model: wrangler.environmentvar
+  pk: 273
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '123'
+- model: wrangler.environmentvar
+  pk: 274
+  fields:
+    name: FTB_MODPACK_ID
+    value: '6'
+- model: wrangler.environmentvar
+  pk: 275
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '91'
+- model: wrangler.environmentvar
+  pk: 276
+  fields:
+    name: FTB_MODPACK_ID
+    value: '4'
+- model: wrangler.environmentvar
+  pk: 277
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '153'
+- model: wrangler.environmentvar
+  pk: 278
+  fields:
+    name: FTB_MODPACK_ID
+    value: '1'
+- model: wrangler.environmentvar
+  pk: 279
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '158'
+- model: wrangler.environmentvar
+  pk: 280
+  fields:
+    name: FTB_MODPACK_ID
+    value: '8'
+- model: wrangler.environmentvar
+  pk: 281
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '142'
+- model: wrangler.environmentvar
+  pk: 282
+  fields:
+    name: FTB_MODPACK_ID
+    value: '36'
+- model: wrangler.environmentvar
+  pk: 283
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '147'
+- model: wrangler.environmentvar
+  pk: 284
+  fields:
+    name: FTB_MODPACK_ID
+    value: '5'
+- model: wrangler.environmentvar
+  pk: 285
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '121'
+- model: wrangler.environmentvar
+  pk: 286
+  fields:
+    name: FTB_MODPACK_ID
+    value: '31'
+- model: wrangler.environmentvar
+  pk: 287
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '144'
+- model: wrangler.environmentvar
+  pk: 288
+  fields:
+    name: FTB_MODPACK_ID
+    value: '52'
+- model: wrangler.environmentvar
+  pk: 289
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '157'
+- model: wrangler.environmentvar
+  pk: 290
+  fields:
+    name: FTB_MODPACK_ID
+    value: '28'
+- model: wrangler.environmentvar
+  pk: 291
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '115'
+- model: wrangler.environmentvar
+  pk: 292
+  fields:
+    name: FTB_MODPACK_ID
+    value: '14'
+- model: wrangler.environmentvar
+  pk: 293
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '104'
+- model: wrangler.environmentvar
+  pk: 294
+  fields:
+    name: FTB_MODPACK_ID
+    value: '34'
+- model: wrangler.environmentvar
+  pk: 295
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '149'
+- model: wrangler.environmentvar
+  pk: 296
+  fields:
+    name: FTB_MODPACK_ID
+    value: '79'
+- model: wrangler.environmentvar
+  pk: 297
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '209'
+- model: wrangler.environmentvar
+  pk: 298
+  fields:
+    name: FTB_MODPACK_ID
+    value: '47'
+- model: wrangler.environmentvar
+  pk: 299
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '155'
+- model: wrangler.environmentvar
+  pk: 300
+  fields:
+    name: FTB_MODPACK_ID
+    value: '19'
+- model: wrangler.environmentvar
+  pk: 301
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '97'
+- model: wrangler.environmentvar
+  pk: 302
+  fields:
+    name: FTB_MODPACK_ID
+    value: '11'
+- model: wrangler.environmentvar
+  pk: 303
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '11'
+- model: wrangler.environmentvar
+  pk: 304
+  fields:
+    name: FTB_MODPACK_ID
+    value: '20'
+- model: wrangler.environmentvar
+  pk: 305
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '102'
+- model: wrangler.environmentvar
+  pk: 306
+  fields:
+    name: FTB_MODPACK_ID
+    value: '33'
+- model: wrangler.environmentvar
+  pk: 307
+  fields:
+    name: FTB_MODPACK_VERSION_ID
+    value: '148'
+- model: wrangler.servertype
+  pk: 1
+  fields:
+    name: Vanilla
+    version: 1.16.4
+    docker_image: itzg/minecraft-server
+    environment_vars: []
+- model: wrangler.servertype
+  pk: 2
+  fields:
+    name: Vanilla, Flat World, No Mobs
+    version: 1.16.4
+    docker_image: itzg/minecraft-server
+    environment_vars:
+    - 2
+    - 267
+- model: wrangler.servertype
+  pk: 3
+  fields:
+    name: Vanilla Hardcore
+    version: 1.16.4
+    docker_image: itzg/minecraft-server
+    environment_vars:
+    - 6
+    - 8
+- model: wrangler.servertype
+  pk: 127
+  fields:
+    name: FTB Revelation
+    version: 3.4.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 268
+    - 269
+- model: wrangler.servertype
+  pk: 128
+  fields:
+    name: FTB Infinity Evolved 1.7
+    version: 3.1.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 270
+    - 271
+- model: wrangler.servertype
+  pk: 129
+  fields:
+    name: FTB Presents Skyfactory 3
+    version: 3.0.21
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 272
+    - 273
+- model: wrangler.servertype
+  pk: 130
+  fields:
+    name: FTB Omnia
+    version: 1.7.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 274
+    - 275
+- model: wrangler.servertype
+  pk: 131
+  fields:
+    name: FTB Presents Stoneblock 2
+    version: 1.21.1
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 276
+    - 277
+- model: wrangler.servertype
+  pk: 132
+  fields:
+    name: FTB Academy
+    version: 1.4.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 278
+    - 279
+- model: wrangler.servertype
+  pk: 133
+  fields:
+    name: FTB Sky Odyssey
+    version: 1.3.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 280
+    - 281
+- model: wrangler.servertype
+  pk: 134
+  fields:
+    name: FTB Ultimate Reloaded
+    version: 1.10.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 282
+    - 283
+- model: wrangler.servertype
+  pk: 135
+  fields:
+    name: FTB Interactions
+    version: 2.0.9
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 284
+    - 285
+- model: wrangler.servertype
+  pk: 136
+  fields:
+    name: FTB Presents Direwolf20 1.12
+    version: 2.8.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 286
+    - 287
+- model: wrangler.servertype
+  pk: 137
+  fields:
+    name: FTB University
+    version: 1.1.1
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 288
+    - 289
+- model: wrangler.servertype
+  pk: 138
+  fields:
+    name: FTB Beyond
+    version: 1.11.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 290
+    - 291
+- model: wrangler.servertype
+  pk: 139
+  fields:
+    name: FTB Presents Direwolf20
+    version: 1.10.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 292
+    - 293
+- model: wrangler.servertype
+  pk: 140
+  fields:
+    name: FTB Continuum
+    version: 1.7.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 294
+    - 295
+- model: wrangler.servertype
+  pk: 141
+  fields:
+    name: FTB Presents Direwolf20 1.16
+    version: 1.0.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 296
+    - 297
+- model: wrangler.servertype
+  pk: 142
+  fields:
+    name: FTB Unstable 1.16
+    version: 1.2.1
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 298
+    - 299
+- model: wrangler.servertype
+  pk: 143
+  fields:
+    name: FTB Presents Skyfactory 2.5
+    version: 2.5.8
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 300
+    - 301
+- model: wrangler.servertype
+  pk: 144
+  fields:
+    name: FTB Lite 3
+    version: 1.5.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 302
+    - 303
+- model: wrangler.servertype
+  pk: 145
+  fields:
+    name: FTB Infinity Evolved Skyblock
+    version: 2.0.1
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 304
+    - 305
+- model: wrangler.servertype
+  pk: 146
+  fields:
+    name: FTB Sky Adventures
+    version: 1.5.0
+    docker_image: itzg/minecraft-server:multiarch
+    environment_vars:
+    - 1
+    - 5
+    - 306
+    - 307

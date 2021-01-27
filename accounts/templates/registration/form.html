@@ -1,0 +1,22 @@
+{% extends 'wrangler/base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}Phukish Minecraft{% endblock %}
+
+{% block content %}
+<h2>{% block form_name %}Account Form{% endblock %}</h2>
+<div class="row">
+  <div class="col-lg-4">
+    <form method="post">
+    {% csrf_token %}
+      {% bootstrap_form form %}
+      {% buttons %}
+        <button type="submit" class="btn btn-primary">
+        {% block form_button %}Submit{% endblock %}
+        </button>
+      {% endbuttons %}<br />
+    {% block form_end %}&nbsp;{% endblock %}
+    </form>
+  </div>
+</div>
+{% endblock %}

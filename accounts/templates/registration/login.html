@@ -1,0 +1,11 @@
+{% extends 'registration/form.html' %}
+
+{% block title %}Authenticate - Phukish Minecraft{% endblock %}
+
+{% block form_name %}Login{% endblock %}
+
+{% block form_button %}Login{% endblock %}
+
+{% block form_end %}
+  <a href="{% url 'password_reset' %}">Reset password</a>
+{% endblock %}

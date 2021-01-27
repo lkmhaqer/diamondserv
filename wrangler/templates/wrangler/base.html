@@ -1,0 +1,91 @@
+{% load bootstrap4 %}
+
+<html>
+  <head>
+    <title>{% block title %}Phukish Minecraft{% endblock %}</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+    <script type="text/javascript">
+      window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+      heap.load("3145636242");
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid d-flex h-100 flex-column">
+      <div class="row align-items-center">
+        <div class="col">
+          <h1>Phukish Minecraft</h1>
+        </div>
+        <div class="col">
+            &nbsp;
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <ul class="nav nav-tabs">
+            {% with url_name=request.resolver_match.url_name %}
+            <li class="nav-item">
+              <a class="nav-link{% if url_name == 'index' %} active{% endif %}" href="{% url 'wrangler:index' %}">Index</a>
+            </li>
+            {% endwith %}
+            <li class="nav-item">
+              <a class="nav-link{% block allserver_active %}{% endblock %}" href="{% url 'wrangler:status' %}">All Servers</a>
+            </li>
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link{% block myserver_active %}{% endblock %}" href="{% url 'wrangler:user_status' request.user %}">My Servers</a>
+              </li>
+              {% with url_name=request.resolver_match.url_name %}
+              <li class="nav-item">
+                <a class="nav-link{% if url_name == 'server_create' %} active{% endif %}" href="{% url 'wrangler:server_create' %}">Create Server</a>
+              </li>
+              {% endwith %}
+              <li class="nav-item">
+                <a class="nav-link{% block profile_active %}{% endblock %}" href="{% url 'accounts:user_detail' %}">Profile</a>
+              </li>
+              {% if user.is_superuser %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'admin:index' %}">Admin Panel</a>
+                </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link{% block register_active %}{% endblock %}" href="{% url 'accounts:user_registration' %}">Sign Up</a>
+              </li>
+              {% with url_name=request.resolver_match.url_name %}
+              <li class="nav-item">
+                <a class="nav-link{% if url_name == 'login' %} active{% endif %}" href="{% url 'login' %}">Login</a>
+              </li>
+              {% endwith %}
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="row flex-grow-1">
+        <div class="col">
+          {% block content %}
+    
+          <!-- content goes here -->
+      
+          {% endblock %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          ଘ(੭*ˊᵕˋ)੭* ̀ˋꜱʟᴏᴛʜʟᴏɢɪꜱᴛɪᴄꜱ {{ VERSION }}-{{ BRANCH }}
+          <small>
+          <span style="color:lightgrey">served from {{ SERVER_NAME }}</span>
+          </small>
+        </div>
+      </div>
+    </div>
+    {% if user.is_authenticated %}
+    <script type="text/javascript">
+      heap.identify('{{ user.username }}');
+    </script>
+    {% endif %}
+  </body>
+</html>

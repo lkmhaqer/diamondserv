@@ -1,0 +1,64 @@
+{% extends 'wrangler/base.html' %}
+
+{% block title %}Status - Phukish Minecraft{% endblock %}
+
+{% block allserver_active %} active{% endblock %}
+
+{% block content %}
+
+{% if servers %}
+<table border=1 cellpadding=5>
+  <tr>
+    <th>Name</th>
+    <th>Host</th>
+    <th>Type</th>
+    <th>Minecraft Version</th>
+    <th>Players</th>
+  </tr>
+  {% for server, status in servers %}
+    {% if status.version.name %}
+      <tr class="table-success">
+        <td>
+          <b><a href="{% url 'wrangler:server_detail' server_name=server.name %}">{{ server.name }}</a></b>
+        </td>
+        <td>
+          {{ server.get_socket }}
+        </td>
+        <td>
+          {{ server.server_type }}
+        </td>  
+        <td>
+          {{ status.version.name }}
+        </td>
+        <td>
+          {{ status.players.online }} / {{ status.players.max }}
+        </td>
+      </tr>
+    {% else %}
+      <tr class="table-warning">
+        <td>
+          <b><a href="{% url 'wrangler:server_detail' server_name=server.name %}">{{ server.name }}</a></b>
+        </td>
+        <td>
+          {{ server.get_socket }}
+        </td>
+        <td>
+          {{ status.version.error }}
+        </td>
+        <td>
+          &nbsp;
+        </td>
+        <td>
+          (╯°□°)╯︵ ┻━┻
+        </td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+&nbsp;<br />
+Total network-wide players: &nbsp;&nbsp;{{ total_players }} / {{ total_capacity }}
+{% else %}
+No servers found ¯\_(ツ)_/¯
+{% endif %}
+
+{% endblock %}

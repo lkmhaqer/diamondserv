@@ -65,6 +65,7 @@ def docker_start_server(server):
   mod_volume = None
   env = [
     'EULA=TRUE',
+    'ENABLE_COMMAND_BLOCK=false',
     f"OPS=lkmhaqer,{op_list}",
     f"MOTD=Phukish Minecraft {server.name} ({server.server_type.name})",
     f"MODE={server.game_type}"

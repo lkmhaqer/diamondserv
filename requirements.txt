@@ -1,12 +1,13 @@
 asgiref==3.3.1
 astroid==2.4.2
+asyncio-dgram==2.1.2
 beautifulsoup4==4.9.3
 certifi==2020.11.8
 chardet==3.0.4
 click==7.1.2
 Django==3.1.3
 django-bootstrap4==2.3.1
-dnspython==1.15.0
+dnspython==2.2.1
 dnspython3==1.15.0
 docker==4.4.0
 gunicorn==20.0.4
@@ -14,7 +15,7 @@ idna==2.10
 isort==5.6.4
 lazy-object-proxy==1.4.3
 mccabe==0.6.1
-mcstatus==4.1.0
+mcstatus==10.0.1
 mysqlclient==2.0.1
 pylint==2.6.0
 pylint-django==2.3.0

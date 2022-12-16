@@ -7,7 +7,7 @@ be triggered from the UI, but executed without stopping our web application.
 """
 from socket import gaierror
 
-from mcstatus import MinecraftServer
+from mcstatus import JavaServer
 
 from docker import DockerClient
 from docker.errors import DockerException
@@ -108,7 +108,7 @@ def minecraft_status(server_list):
   total_players = 0
   total_capacity = 0
   for server in server_list:
-    query = MinecraftServer.lookup(server.get_socket())
+    query = JavaServer.lookup(server.get_socket(), timeout=.15)
     try:
       servers.append((server, query.status()))
       total_players += query.status().players.online

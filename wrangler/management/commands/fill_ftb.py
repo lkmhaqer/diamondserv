@@ -8,6 +8,7 @@ import json
 import requests
 
 from django.core.management.base import BaseCommand
+from django.db.utils import IntegrityError
 
 from wrangler.models import EnvironmentVar, ServerType # pylint: disable=import-error
 
@@ -32,11 +33,14 @@ class Command(BaseCommand):
       response = requests.get(f'{FTB_MODPACK_URL}{i}')
       pack = json.loads(response.text)
 
-      servertype, created = ServerType.objects.get_or_create(
-        name=pack["name"],
-        version=pack["versions"][-1]["name"],
-        docker_image='itzg/minecraft-server:multiarch',
-      )
+      try:
+        servertype, created = ServerType.objects.get_or_create(
+          name=pack["name"],
+          version=pack["versions"][-1]["name"],
+          docker_image='itzg/minecraft-server:multiarch',
+        )
+      except IntegrityError:
+        created = False
 
       if created:
         ftb_type = EnvironmentVar.objects.get(name='TYPE', value='FTBA')
